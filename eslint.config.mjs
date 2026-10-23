@@ -83,7 +83,7 @@ export default [
 
   // Ignore patterns
   {
-    ignores: ["dist/", "build/", "node_modules/", ".idea/", ".tmp/"],
+    ignores: ["dist/", "build/", "node_modules/", ".pnpm/", ".idea/", ".tmp/"],
   },
 
   // Prettier configuration
