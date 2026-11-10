@@ -1,36 +1,32 @@
 version: 2
 updates:
-    - package-ecosystem: "npm"
-      directory: "/"
+    - package-ecosystem: npm
+      directory: /
       schedule:
-          interval: "weekly"
-          day: "sunday"
+          interval: daily
           time: "22:00"
-          timezone: "UTC"
+          timezone: UTC
       groups:
           all-dependencies:
               patterns:
                   - "*"
       commit-message:
-          prefix: "build(deps)"
-          include: "scope"
+          prefix: build(deps)
       labels:
-          - "dependencies"
-          - "npm"
-    - package-ecosystem: "github-actions"
-      directory: "/"
+          - dependencies
+          - npm
+    - package-ecosystem: github-actions
+      directory: /
       schedule:
-          interval: "weekly"
-          day: "sunday"
+          interval: daily
           time: "22:00"
-          timezone: "UTC"
+          timezone: UTC
       groups:
           all-dependencies:
               patterns:
                   - "*"
       commit-message:
-          prefix: "ci"
-          include: "scope"
+          prefix: ci(deps)
       labels:
-          - "dependencies"
-          - "github-actions"
+          - dependencies
+          - github-actions
