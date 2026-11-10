@@ -21,6 +21,7 @@ jobs:
               with:
                   fetch-depth: 0
                   fetch-tags: true
+            - run: python3 scripts/test_dependabot_policy.py
 
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v7
