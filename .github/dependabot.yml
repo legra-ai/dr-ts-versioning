@@ -10,6 +10,11 @@ updates:
           all-dependencies:
               patterns:
                   - "*"
+      ignore:
+          # typescript-eslint does not support TypeScript 7 (no JS compiler API yet).
+          - dependency-name: typescript
+            update-types:
+                - version-update:semver-major
       commit-message:
           prefix: build(deps)
       labels:
